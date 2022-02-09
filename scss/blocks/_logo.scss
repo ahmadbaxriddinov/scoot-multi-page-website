@@ -1,0 +1,8 @@
+.logo__img {
+    display: block;
+    transition: 0.1s ease all;
+}
+
+.logo__img:hover path {
+    fill: $light-grey;
+}

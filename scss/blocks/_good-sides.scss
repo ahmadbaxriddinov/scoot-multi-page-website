@@ -1,0 +1,229 @@
+.good-sides__wrapper {
+    overflow: hidden;
+}
+
+.good-sides__list {
+    @include reset-list;
+    padding-bottom: 330px;
+}
+
+.good-sides__item {
+    @include flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 160px;
+    position: relative;
+
+    &:nth-child(2n),
+    &::after {
+        flex-direction: row-reverse;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: 740px;
+        height: 150px;
+        position: absolute;
+        background: url("../img/lines.svg") no-repeat center;
+        right: -165px;
+        top: 300px;
+        z-index: 1;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 445px;
+        height: 445px;
+        position: absolute;
+        top: 2px;
+        right: -500px;
+        border-radius: 50%;
+        background-color: $light-grey;
+    }
+}
+
+.good-sides__item--girl::after {
+    right: -500px;
+    top: 0;
+    transform: rotateX(180deg);
+}
+
+.good-sides__item--city::before {
+    transform: rotateY(180deg);
+    position: absolute;
+    left: -550px;
+    top: 0;
+    z-index: 1;
+}
+
+.good-sides__item--city::after {
+    content: "";
+    display: block;
+    width: 445px;
+    height: 445px;
+    position: absolute;
+    top: 2px;
+    left: -500px;
+    background-color: $light-grey;
+    border-radius: 50%;
+}
+
+.good-sides__item--payment::before {
+    position: absolute;
+    right: -545px;
+    top: 78px;
+    z-index: 1;
+}
+
+.good-sides__item--payment::after {
+    content: "";
+    display: block;
+    width: 445px;
+    height: 445px;
+    position: absolute;
+    top: 2px;
+    right: -500px;
+    background-color: $light-grey;
+    border-radius: 50%;
+}
+
+.good-sides__content {
+    width: 445px;
+}
+
+.good-sides__title {
+    @include font;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2.14286px;
+    color: $dark;
+    margin: 0;
+}
+
+.good-sides__descreption {
+    margin: 0;
+    padding-top: 24px;
+    padding-bottom: 40px;
+    color: $grey;
+}
+
+@media screen and (max-width: $desktop) {
+    .good-sides__list {
+        padding-bottom: 104px;
+    }
+
+    .good-sides__item {
+        text-align: center;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        padding-bottom: 120px;
+        position: relative;
+
+        &:nth-child(2n),
+        &::after {
+            text-align: center;
+            flex-direction: column-reverse;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        &::before {
+            width: 735px;
+            height: 150px;
+            position: absolute;
+            right: -35px;
+        }
+    }
+
+    .good-sides__item--city::before {
+        left: -425px;
+    }
+
+    .good-sides__item--payment::before {
+        right: -420px;
+    }
+
+    .good-sides__content {
+        width: 573px;
+        padding-top: 64px;
+    }
+
+    .good-sides__title {
+        display: inline-block;
+        width: 457px;
+    }
+
+    .good-sides__descreption {
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .good-sides__list {
+        width: 100%;
+    }
+
+    .good-sides__item {
+        padding-bottom: 120px;
+
+        &::after {
+            display: none;
+        }
+
+        &::before {
+            left: -500px;
+            top: -10px;
+        }
+    }
+
+    .good-sides__item--girl::before {
+        top: 165px;
+        left: -5px;
+    }
+
+    .good-sieds__item--coming::before {
+        left: -510px;
+        top: 0;
+    }
+
+    .good-sides__item--era::before {
+        left: -420px;
+    }
+
+    .good-sides__item--payment::before {
+        left: 127px;
+        top: 0;
+    }
+
+    .good-sides__content {
+        width: 100%;
+        padding-top: 56px;
+    }
+
+    .good-sides__title {
+        width: 100%;
+        font-size: 32px;
+        line-height: 32px;
+        text-align: center;
+        letter-spacing: -1.42857px;
+    }
+
+    .good__descreption {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    .good-sides__img {
+        width: 311px;
+        height: 311px;
+        display: block;
+    }
+}

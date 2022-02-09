@@ -1,0 +1,15 @@
+@mixin font {
+    font-family: "Space Mono", "Arial", sans-serif;
+    font-weight: bold;
+}
+
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin flex {
+    display: flex;
+    flex-wrap: wrap;
+}

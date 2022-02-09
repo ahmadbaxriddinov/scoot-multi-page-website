@@ -1,0 +1,187 @@
+.intro {
+    background: url("../img/intro-img.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.intro__wrapper {
+    margin-top: 98px;
+    overflow: hidden;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+
+    .intro {
+        background: url("../img/intro-img@2x.jpg") no-repeat center;
+        background-size: cover;
+    }
+}
+
+.intro__container {
+    padding-top: 152px;
+    padding-bottom: 152px;
+}
+
+.intro__content {
+    width: 500px;
+    color: $white;
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 234px;
+        height: 63px;
+        position: absolute;
+        background: url("../img/circles.svg") no-repeat center;
+        background-size: cover;
+        top: 255px;
+        right: -760px;
+    }
+}
+
+.intro__title {
+    @include font;
+    margin: 0;
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -2.5px;
+}
+
+.intro__action {
+    position: relative;
+    padding-left: 95px;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 203px;
+        height: 12px;
+        position: absolute;
+        background: url("../img/intro-line.svg") no-repeat center;
+        background-size: contain;
+        top: 80px;
+        left: -144px;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 447px;
+        height: 138px;
+        position: absolute;
+        background: url("../img/intro-lines.svg") no-repeat center;
+        background-size: contain;
+        top: 79px;
+        right: -487px;
+    }
+}
+
+.intro__descreption {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: $white;
+}
+
+@media screen and (max-width: $desktop) {
+    .intro {
+        background: url("../img/intro-img-tablet.jpg") no-repeat center;
+        background-size: cover;
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+
+        .intro {
+            background: url("../img/intro-img-tablet@2x.jpg") no-repeat center;
+            background-size: cover;
+        }
+    }
+
+    .intro__container {
+        padding-top: 137px;
+        padding-bottom: 217px;
+        text-align: center;
+    }
+
+    .intro__content {
+        width: 573px;
+        display: inline-block;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .intro__action {
+        padding-left: 0;
+
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            position: absolute;
+            top: 230px;
+            left: -200px;
+        }
+    }
+
+    .intro__descreption {
+        padding-top: 24px;
+        padding-bottom: 32px;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .intro {
+        background: url("../img/intro-img-mobile.jpg") no-repeat center;
+        background-size: cover;
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+
+        .intro {
+            background: url("../img/intro-img-mobile@2x.jpg") no-repeat center;
+            background-size: cover;
+        }
+    }
+
+    .intro__container {
+        padding-top: 115px;
+        padding-bottom: 179px;
+    }
+
+    .intro__wrapper {
+        margin-top: 65px;
+    }
+
+    .intro__content {
+        width: 100%
+    }
+
+    .intro__action::after {
+        position: absolute;
+        top: 250px;
+        left: -325px;
+    }
+
+    .intro__title {
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -1.78571px;
+    }
+}
